@@ -16,13 +16,22 @@ const connect = function() {
     setTimeout(() => {
     conn.write("Move: up");
     }, 4000);
+    setTimeout(() => {
+    conn.write("Move: down");
+    }, 500);
+    setTimeout(() => {
+    conn.write("Move: left");
+    }, 1000);
+    setTimeout(() => {
+    conn.write("Move: right");
+    }, 6000);
   });
 
-  conn.on("connect", () => {
-    setInterval(() => {
-    conn.write("Move: left");
-    }, 3000);
-  });
+  // conn.on("connect", () => {
+  //   setInterval(() => {
+  //   conn.write("Move: left");
+  //   }, 3000);
+  // });
 
   conn.on("data", (data) => {
     console.log("Server says: ", data);

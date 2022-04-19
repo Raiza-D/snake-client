@@ -18,7 +18,33 @@ const connect = function() {
   return conn;
 };
 
-console.log("Connecting ...");
-client.connect();
+module.exports = { connect };
 
-module.exports = connect;
+
+// const connect = {
+
+//   createConnection: () => {
+//     const conn = net.createConnection({
+//     host: "10.0.0.95",
+//     port: 50541,
+//     message: console.log("Connecting...")
+//   });
+//     return conn;
+//   },
+
+//   interpretIncomingData: () => {
+//     // interpret incoming data as text
+//     conn.setEncoding("utf8");
+//   },
+
+//   receiveDataFromGameServer: () => {
+//     conn.on("data", (data) => {
+//     console.log("Server says: ", data);
+//   });
+//  }
+// };
+
+
+
+
+

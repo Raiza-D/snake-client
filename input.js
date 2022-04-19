@@ -9,6 +9,14 @@ const setupInput = function() {
     if (key === "\u0003") {
       process.exit();
     }
+
+    if (key === "w") {
+      console.log("This is to move up: ", key);
+    }
+
+    if (key === "s") {
+      console.log("This is to move down: ", key);
+    }
   };
 
   stdin.on("data", handleUserInput);

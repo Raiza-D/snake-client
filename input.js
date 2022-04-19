@@ -17,6 +17,15 @@ const setupInput = function() {
     if (key === "s") {
       console.log("This is to move down: ", key);
     }
+
+    if (key === "a") {
+      console.log("This is to move left: ", key);
+    }
+
+    if (key === "d") {
+      console.log("This is to move right: ", key);
+    }
+    
   };
 
   stdin.on("data", handleUserInput);

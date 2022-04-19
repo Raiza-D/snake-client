@@ -13,24 +13,9 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Successfully connected to game server!");
     conn.write("Name: RDG");
-    // setTimeout(() => {
-    // conn.write("Move: up");
-    // }, 4000);
-    // setTimeout(() => {
-    // conn.write("Move: down");
-    // }, 500);
-    // setTimeout(() => {
-    // conn.write("Move: left");
-    // }, 1000);
-    // setTimeout(() => {
-    // conn.write("Move: right");
-    // }, 6000);
-  });
-
-  conn.on("connect", () => {
-    setInterval(() => {
-    conn.write("Move: left");
-    }, 3000);
+    setTimeout(() => {
+    conn.write("Move: up");
+    }, 4000);
   });
 
   conn.on("data", (data) => {

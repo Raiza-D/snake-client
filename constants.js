@@ -8,6 +8,7 @@ const moveDown = "s";
 const moveLeft = "a";
 const moveRight = "d";
 
+// Object to contain key entered by user and the message to send:
 const specialPlayerMsgs = {
   y: "Go, snake, go!",
   h: "FEED ME!!",

@@ -1,3 +1,5 @@
+const { moveUp, moveDown, moveLeft, moveRight, specialPlayerMsgs } = require("./constants");
+
 // Stores the active TCP connection object
 let connection;
 
@@ -12,43 +14,46 @@ const setupInput = function(conn) {
   return stdin;
   };
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   if (key === "\u0003") {
     process.exit();
   }
-
-  if (key === "w") {
+  
+  if (key === moveUp) {
     connection.write("Move: up");
   }
 
-  if (key === "s") {
+  if (key === moveDown) {
     connection.write("Move: down");
   }
 
-  if (key === "a") {
+  if (key === moveLeft) {
     connection.write("Move: left");
   }
 
-  if (key === "d") {
+  if (key === moveRight) {
     connection.write("Move: right");
   }
 
-  if (key === "y") {
-    connection.write("Say: Go, snake, go!");
+  if (specialPlayerMsgs[key]) {
+    connection.write(`Say: ${specialPlayerMsgs[key]}`);
   }
-
-  if (key === "h") {
-    connection.write("Say: FEED ME!!");
-  }
-
-  if (key === "j") {
-    connection.write("Say: Mmm pie-thon!");
-  }
-
-  if (key === "u") {
-    connection.write("Say: Hisssterical");
-  }
-
 };
 
 module.exports = { setupInput };
+
+  // if (key === "y") {
+  //   connection.write("Say: Go, snake, go!");
+  // }
+
+  // if (key === "h") {
+  //   connection.write("Say: FEED ME!!");
+  // }
+
+  // if (key === "j") {
+  //   connection.write("Say: Mmm pie-thon!");
+  // }
+
+  // if (key === "u") {
+  //   connection.write("Say: Hisssterical");
+  // }

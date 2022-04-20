@@ -1,22 +1,24 @@
-// client.js
 const net = require("net");
 const { IP, Port } = require("./constants");
 
-// establishes a connection with the game server
+// Establishes a connection with the game server
 const connect = function() {
   const conn = net.createConnection({
     host: IP,
     port: Port
   });
 
-  // interpret incoming data as text
+  // Interpret incoming data as text
   conn.setEncoding("utf8");
 
+  // Confirmation connection to server has been established
+  // Send player name, appears on gameboard
   conn.on("connect", () => {
     console.log("Successfully connected to game server!");
     conn.write("Name: RDG");
   });
 
+  // Receive data (a message) from game server to confirm connection
   conn.on("data", (data) => {
     console.log("Server says: ", data);
   });

@@ -1,4 +1,6 @@
-const { moveUp, moveDown, moveLeft, moveRight, specialPlayerMsgs } = require("./constants");
+// const { moveUp, moveDown, moveLeft, moveRight, specialPlayerMsgs } = require("./constants");
+
+const { actions } = require("./constants");
 
 // Stores the active TCP connection object
 let connection;
@@ -15,33 +17,39 @@ const setupInput = function(conn) {
   };
 
 const handleUserInput = function(key) {
-  // Terminates game if user inputs Ctrl+C 
-  if (key === "\u0003") {
+  // Terminates game if user inputs Ctrl+C or x
+  if (key === "\u0003" || key === "x") {
     console.log("You exited the game, goodbye.");
     process.exit();
   }
-  
+
+  if (actions[key]) {
+    connection.write(actions[key]);
+  }
+
+  // connection.write(movements[key]);
+
   // Movement commands:
-  if (key === moveUp) {
-    connection.write("Move: up");
-  }
+  // if (key === moveUp) {
+  //   connection.write("Move: up");
+  // }
 
-  if (key === moveDown) {
-    connection.write("Move: down");
-  }
+  // if (key === moveDown) {
+  //   connection.write("Move: down");
+  // }
 
-  if (key === moveLeft) {
-    connection.write("Move: left");
-  }
+  // if (key === moveLeft) {
+  //   connection.write("Move: left");
+  // }
 
-  if (key === moveRight) {
-    connection.write("Move: right");
-  }
+  // if (key === moveRight) {
+  //   connection.write("Move: right");
+  // }
 
   // Key mapping to send messages:
-  if (specialPlayerMsgs[key]) {
-    connection.write(`Say: ${specialPlayerMsgs[key]}`);
-  }
+  // if (specialPlayerMsgs[key]) {
+  //   connection.write(`Say: ${specialPlayerMsgs[key]}`);
+  // }
 };
 
 module.exports = { setupInput };

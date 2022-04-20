@@ -1,5 +1,3 @@
-// const { moveUp, moveDown, moveLeft, moveRight, specialPlayerMsgs } = require("./constants");
-
 const { actions } = require("./constants");
 
 // Stores the active TCP connection object
@@ -23,33 +21,11 @@ const handleUserInput = function(key) {
     process.exit();
   }
 
+  /* References actions object. Executes corresponding action or message
+  to send to server, according to keyboard stroke inputted by user. */
   if (actions[key]) {
     connection.write(actions[key]);
   }
-
-  // connection.write(movements[key]);
-
-  // Movement commands:
-  // if (key === moveUp) {
-  //   connection.write("Move: up");
-  // }
-
-  // if (key === moveDown) {
-  //   connection.write("Move: down");
-  // }
-
-  // if (key === moveLeft) {
-  //   connection.write("Move: left");
-  // }
-
-  // if (key === moveRight) {
-  //   connection.write("Move: right");
-  // }
-
-  // Key mapping to send messages:
-  // if (specialPlayerMsgs[key]) {
-  //   connection.write(`Say: ${specialPlayerMsgs[key]}`);
-  // }
 };
 
 module.exports = { setupInput };

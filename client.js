@@ -11,8 +11,8 @@ const connect = function() {
   // Interpret incoming data as text
   conn.setEncoding("utf8");
 
-  // Confirmation connection to server has been established
-  // Send player name, appears on gameboard
+  // Confirmation that connection to server has been established
+  // Send player name. Appears on gameboard
   conn.on("connect", () => {
     console.log("Successfully connected to game server!");
     conn.write("Name: RDG");

@@ -17,6 +17,7 @@ const setupInput = function(conn) {
 const handleUserInput = function(key) {
   // Terminates game if user inputs Ctrl+C 
   if (key === "\u0003") {
+    console.log("You exited the game, goodbye.");
     process.exit();
   }
   

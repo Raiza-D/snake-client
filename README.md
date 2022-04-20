@@ -8,8 +8,8 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["screenshot description"](#)
-!["screenshot description"](#)
+!["Screenshot of the gameboard with the snake moving towards the dot."](#./snake-game-pic1.jpeg)
+!["Screenshot of the gameboard showing one of the special player messages available."](#./snake-game-pic2.jpeg)
 
 
 ## Getting Started

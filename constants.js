@@ -4,16 +4,16 @@ const Port = 50541;
 
 /* Key mappings for snake movements and special player messages.
 Letters represent keyboard stroke. */
-  const actions = {
-    w: "Move: up",
-    s: "Move: down",
-    a: "Move: left",
-    d: "Move: right",
-    y: "Say: Go, snake, go!",
-    h: "Say: FEED ME!!",
-    j: "Say: Mmm pie-thon!",
-    u: "Say: Hisssterical",
-  };
+const actions = {
+  w: "Move: up",
+  s: "Move: down",
+  a: "Move: left",
+  d: "Move: right",
+  y: "Say: Go, snake, go!",
+  h: "Say: FEED ME!!",
+  j: "Say: Mmm pie-thon!",
+  u: "Say: Hisssterical",
+};
 
 module.exports = {
   IP,

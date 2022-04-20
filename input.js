@@ -12,7 +12,7 @@ const setupInput = function(conn) {
   stdin.resume();
   stdin.on("data", handleUserInput);
   return stdin;
-  };
+};
 
 const handleUserInput = function(key) {
   // Terminates game if user inputs Ctrl+C or x

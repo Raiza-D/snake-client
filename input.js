@@ -15,10 +15,12 @@ const setupInput = function(conn) {
   };
 
 const handleUserInput = function(key) {
+  // Terminates game if user inputs Ctrl+C 
   if (key === "\u0003") {
     process.exit();
   }
   
+  // Movement commands:
   if (key === moveUp) {
     connection.write("Move: up");
   }
@@ -35,26 +37,10 @@ const handleUserInput = function(key) {
     connection.write("Move: right");
   }
 
-  // Key inputted by user maps to corresponding key-value and string message:
+  // Key mapping to send messages:
   if (specialPlayerMsgs[key]) {
     connection.write(`Say: ${specialPlayerMsgs[key]}`);
   }
 };
 
 module.exports = { setupInput };
-
-  // if (key === "y") {
-  //   connection.write("Say: Go, snake, go!");
-  // }
-
-  // if (key === "h") {
-  //   connection.write("Say: FEED ME!!");
-  // }
-
-  // if (key === "j") {
-  //   connection.write("Say: Mmm pie-thon!");
-  // }
-
-  // if (key === "u") {
-  //   connection.write("Say: Hisssterical");
-  // }

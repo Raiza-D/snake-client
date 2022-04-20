@@ -35,6 +35,7 @@ const handleUserInput = function(key) {
     connection.write("Move: right");
   }
 
+  // Key inputted by user maps to corresponding key-value and string message:
   if (specialPlayerMsgs[key]) {
     connection.write(`Say: ${specialPlayerMsgs[key]}`);
   }

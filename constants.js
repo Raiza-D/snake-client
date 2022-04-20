@@ -1,14 +1,14 @@
-// constants.js
+// Store host IP and port into variables (to hide them):
 const IP = "10.0.0.95";
-
 const Port = 50541;
 
+// Store keyboard input to move snake:
 const moveUp = "w";
 const moveDown = "s";
 const moveLeft = "a";
 const moveRight = "d";
 
-// Object to contain key entered by user and the message to send:
+// Key mappings for messages:
 const specialPlayerMsgs = {
   y: "Go, snake, go!",
   h: "FEED ME!!",
@@ -25,10 +25,3 @@ module.exports = {
   moveRight,
   specialPlayerMsgs
 };
-
-/* Notes from mentor session: 
-Single-source of truth -- Keeping important code into one file for easier
-updating later on. Future maintainability.
-Functions can be factored too.
-Function names matter - verb and a noun or another verb.
-*/

@@ -4,12 +4,12 @@ Snake game is a very popular video game. It is a video game concept where the pl
 
 This is simply a multiplayer take on the genre.
 
-Before you can run this client, you will need to be running the server side which you can download and install from here. 
+Before you can run this client, you will need to be running the server side which you can download and install from here: https://github.com/Raiza-D/snek-multiplayer
 
 ## Final Product
 
-!["Screenshot of the gameboard with the snake moving towards the dot."](#./snake-game-pic1.jpeg)
-!["Screenshot of the gameboard showing one of the special player messages available."](#./snake-game-pic2.jpeg)
+!["Screenshot of the gameboard with the snake moving towards the dot."](./snake-game-pic1.jpeg)
+!["Screenshot of the gameboard showing one of the special player messages available."](./snake-game-pic2.jpeg)
 
 
 ## Getting Started

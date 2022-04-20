@@ -16,3 +16,9 @@ Before you can run this client, you will need to be running the server side whic
 
 - Follow steps inside the snek server repo to run the server side
 - Run the development snake client using the `node play.js` command.
+
+## Tip
+
+- To make the snake move automatically on its own, go to Snek-Mutiplayer repo > src > constants.js > `const AUTO_MOVE_DEFAULT` set it to `true`.
+- To change the speed of the snake, go to Snek-Multiplayer repo > src > constants.js > `const GAME_SPEED` change the number (the higher the slower).
+
